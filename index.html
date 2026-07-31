@@ -344,10 +344,10 @@
             padding: 25px;
             border-radius: 8px;
             margin: 20px auto;
-            max-width: 750px;
-            font-size: 22px;
+            max-width: 700px;
+            font-size: 24px;
             color: #2c221e;
-            line-height: 1.6;
+            line-height: 1.5;
             font-weight: 600;
         }
 
@@ -364,6 +364,22 @@
         @keyframes floatUp {
             0% { transform: translateY(0) scale(0.8); opacity: 1; }
             100% { transform: translateY(-140px) scale(1.3); opacity: 0; }
+        }
+
+        /* MUSIC WIDGET STYLING */
+        .music-player-widget {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 1000;
+            background: rgba(27, 38, 28, 0.9);
+            border: 2px solid #4a5d4e;
+            border-radius: 10px;
+            padding: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
     </style>
 </head>
@@ -424,9 +440,9 @@
             <div class="progress-tag">Checkpoint 02 / 03</div>
             <div class="question-box">Which month are we setting camp for something special?</div>
             <div style="width:100%;">
-                <button class="quiz-option" onclick="wrongAnswer()">🌱 May</button>
-                <button class="quiz-option" onclick="correctAndNext('card-q3')">🥳 August</button>
-                <button class="quiz-option" onclick="wrongAnswer()">🍂 November</button>
+                <button class="quiz-option" onclick="wrongAnswer()">🌲 July</button>
+                <button class="quiz-option" onclick="correctAndNext('card-q3')">🥳 August (The Big Birthday Month)</button>
+                <button class="quiz-option" onclick="wrongAnswer()">🍂 September</button>
             </div>
         </div>
 
@@ -443,9 +459,9 @@
             <div class="progress-tag">Checkpoint 03 / 03</div>
             <div class="question-box">How many birthday surprises are planned for you this month?</div>
             <div style="width:100%;">
-                <button class="quiz-option" onclick="wrongAnswer()">🎁 Just 1 quick gesture</button>
-                <button class="quiz-option" onclick="wrongAnswer()">🗺️ 5 planned stops</button>
-                <button class="quiz-option" onclick="correctAndNext('card-closing')">🚀 Infinity & Beyond 🤪🔥</button>
+                <button class="quiz-option" onclick="wrongAnswer()"> Just 1 quick gesture</button>
+                <button class="quiz-option" onclick="wrongAnswer()"> 5 planned stops</button>
+                <button class="quiz-option" onclick="correctAndNext('card-closing')"> Infinity & Beyond 🤪🔥</button>
             </div>
         </div>
 
@@ -465,12 +481,26 @@
         </div>
 
         <div class="love-note-box">
-            The countdown has officially begun. ⏳ This August isn't just your birthday month—it's a celebration of the incredible man you are. Get ready for unforgettable memories. ❤️🏕️🎣
+            🌲 <b>To My Favorite Adventure Partner & Husband:</b><br><br>
+            You passed the quiz! Something big is brewing for you this month... get ready for an amazing birthday journey ahead! ⛰️🎣🔥
         </div>
 
-        <p style="font-size: 22px; color: #7c5230; font-weight: 700; margin-top: 10px;">Don't get too comfortable, Handsome! 😏 Week 2 is just around the corner...</p>
+        <p style="font-size: 22px; color: #7c5230; font-weight: 700;">Stay tuned for Week 2 next week, Chief! 😉</p>
     </div>
 
+</div>
+
+<!-- BACKGROUND MUSIC WIDGET (UP THEME) -->
+<div class="music-player-widget">
+    <iframe 
+        width="180" 
+        height="50" 
+        src="https://www.youtube.com/embed/GeUIVkdSGu4?autoplay=1&loop=1&playlist=GeUIVkdSGu4" 
+        title="Background Music - Up Theme" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
 </div>
 
 <script>
