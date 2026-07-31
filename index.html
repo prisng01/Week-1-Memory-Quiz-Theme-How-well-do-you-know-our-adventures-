@@ -23,7 +23,7 @@
             color: #e2e8f0;
         }
 
-        /* --- LAPTOP FULL PAGE CONTAINER --- */
+        /* --- CONTAINER --- */
         .container { 
             width: 90vw; 
             max-width: 1100px; 
@@ -43,11 +43,12 @@
             perspective: 1200px;
         }
 
-        /* --- ENVELOPE STAGE --- */
+        /* --- ENVELOPE --- */
         .envelope-wrapper {
             position: relative;
-            width: 460px;
-            height: 300px;
+            width: 420px;
+            height: 280px;
+            max-width: 90%;
             cursor: pointer;
             z-index: 10;
             transition: transform 0.5s ease, opacity 0.6s ease;
@@ -57,7 +58,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: #3b2c20; /* Deep Leather Brown */
+            background-color: #3b2c20;
             border: 3px solid #5c4533;
             border-radius: 8px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.7);
@@ -70,9 +71,9 @@
             left: 0;
             width: 0;
             height: 0;
-            border-left: 230px solid transparent;
-            border-right: 230px solid transparent;
-            border-top: 170px solid #4a3829;
+            border-left: 210px solid transparent;
+            border-right: 210px solid transparent;
+            border-top: 150px solid #4a3829;
             z-index: 5;
             transform-origin: top;
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -82,9 +83,9 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            border-left: 230px solid #31251b;
-            border-top: 150px solid transparent;
-            border-bottom: 150px solid transparent;
+            border-left: 210px solid #31251b;
+            border-top: 140px solid transparent;
+            border-bottom: 140px solid transparent;
             z-index: 4;
         }
 
@@ -92,9 +93,9 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            border-right: 230px solid #2a1f17;
-            border-top: 150px solid transparent;
-            border-bottom: 150px solid transparent;
+            border-right: 210px solid #2a1f17;
+            border-top: 140px solid transparent;
+            border-bottom: 140px solid transparent;
             z-index: 4;
         }
 
@@ -102,20 +103,20 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            border-bottom: 160px solid #261b13;
-            border-left: 230px solid transparent;
-            border-right: 230px solid transparent;
+            border-bottom: 150px solid #261b13;
+            border-left: 210px solid transparent;
+            border-right: 210px solid transparent;
             z-index: 4;
             border-radius: 0 0 8px 8px;
         }
 
         .wax-seal {
             position: absolute;
-            top: 55%;
+            top: 52%;
             left: 50%;
             transform: translate(-50%, -50%) scale(1);
-            width: 85px;
-            height: 85px;
+            width: 80px;
+            height: 80px;
             background: radial-gradient(circle, #a13d2d 0%, #611f15 100%);
             border-radius: 50%;
             z-index: 6;
@@ -123,7 +124,7 @@
             align-items: center;
             justify-content: center;
             color: #d4af37;
-            font-size: 38px;
+            font-size: 36px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.6);
             border: 2px dashed #611f15;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -139,7 +140,7 @@
             bottom: -50px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 20px;
+            font-size: 18px;
             color: #d4af37;
             font-weight: 800;
             letter-spacing: 2px;
@@ -153,12 +154,12 @@
             to { transform: translate(-50%, -10px); }
         }
 
-        /* --- LAPTOP CARD LAYOUT --- */
+        /* --- CARD LAYOUT --- */
         .card {
             position: absolute;
             width: 95%;
             height: 92%;
-            background: #f4ede2; /* Field Journal Parchment */
+            background: #f4ede2;
             border: 4px solid #3c2a1e;
             border-radius: 14px;
             padding: 35px;
@@ -173,6 +174,7 @@
             transform: translateY(80px) scale(0.95);
             z-index: 2;
             color: #2c221e;
+            overflow-y: auto;
         }
 
         .card.active {
@@ -182,7 +184,6 @@
             z-index: 20;
         }
 
-        /* Single column override for cover/closing */
         .card.single-col {
             display: flex;
             flex-direction: column;
@@ -193,8 +194,8 @@
         /* TYPOGRAPHY */
         .adventure-title {
             font-family: 'Special Elite', cursive, monospace;
-            color: #1b3821; /* Forest Green */
-            font-size: 36px;
+            color: #1b3821;
+            font-size: 32px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -202,7 +203,7 @@
         }
 
         .subtitle {
-            font-size: 20px;
+            font-size: 18px;
             color: #7c5230;
             font-weight: 700;
             text-transform: uppercase;
@@ -225,7 +226,7 @@
             width: 100%;
         }
 
-        /* PHOTO DISPLAY FOR OUTDOOR THEME */
+        /* PHOTOS */
         .photo-single {
             background: #fff;
             padding: 10px 10px 20px 10px;
@@ -233,12 +234,12 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.25);
             transform: rotate(-2deg);
             width: 100%;
-            max-width: 420px;
+            max-width: 400px;
         }
 
         .photo-single img {
             width: 100%;
-            height: 260px;
+            height: 250px;
             object-fit: cover;
             display: block;
             border-radius: 2px;
@@ -265,14 +266,14 @@
 
         .photo-frame img {
             width: 100%;
-            height: 190px;
+            height: 180px;
             object-fit: cover;
             display: block;
         }
 
-        /* QUIZ BUTTONS & INTERACTION */
+        /* QUIZ */
         .progress-tag {
-            font-size: 16px;
+            font-size: 14px;
             color: #a3532d;
             font-weight: 800;
             text-transform: uppercase;
@@ -281,7 +282,7 @@
         }
 
         .question-box {
-            font-size: 26px;
+            font-size: 24px;
             color: #1b261c;
             font-weight: 800;
             margin-bottom: 20px;
@@ -297,7 +298,7 @@
             border: 2px solid #3c523f;
             border-radius: 8px;
             color: #e2e8f0;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             cursor: pointer;
             text-align: left;
@@ -317,7 +318,7 @@
         }
 
         .next-btn {
-            font-size: 22px;
+            font-size: 20px;
             color: #fff;
             cursor: pointer;
             margin-top: 15px;
@@ -337,7 +338,6 @@
             transform: translateY(-2px);
         }
 
-        /* CLOSING NOTE */
         .love-note-box {
             background: #eae2d3;
             border: 2px dashed #7c5230;
@@ -345,7 +345,7 @@
             border-radius: 8px;
             margin: 20px auto;
             max-width: 700px;
-            font-size: 24px;
+            font-size: 22px;
             color: #2c221e;
             line-height: 1.5;
             font-weight: 600;
@@ -364,6 +364,19 @@
         @keyframes floatUp {
             0% { transform: translateY(0) scale(0.8); opacity: 1; }
             100% { transform: translateY(-140px) scale(1.3); opacity: 0; }
+        }
+
+        /* MEDIA QUERIES FOR MOBILE */
+        @media (max-width: 768px) {
+            .card {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+            .question-box { font-size: 20px; }
+            .adventure-title { font-size: 24px; }
+            .photo-single img { height: 180px; }
+            .photo-frame img { height: 120px; }
         }
     </style>
 </head>
@@ -393,7 +406,7 @@
             <div class="adventure-title">The Birthday Quest Begins</div>
         </div>
 
-        <p style="font-size:24px; color:#4a3829; margin: 30px auto; max-width: 650px; line-height: 1.5;">
+        <p style="font-size:20px; color:#4a3829; margin: 20px auto; max-width: 650px; line-height: 1.5;">
             Pass the 3 trail memory checkpoints to unlock your first birthday surprise coordinates! 🌲⛺
         </p>
 
@@ -402,7 +415,7 @@
         </div>
     </div>
 
-    <!-- QUESTION 1 (PHOTO 1) -->
+    <!-- QUESTION 1 -->
     <div class="card" id="card-q1">
         <div class="left-panel">
             <div class="progress-tag">Checkpoint 01 / 03</div>
@@ -421,14 +434,14 @@
         </div>
     </div>
 
-    <!-- QUESTION 2 (PHOTO 2) -->
+    <!-- QUESTION 2 -->
     <div class="card" id="card-q2">
         <div class="left-panel">
             <div class="progress-tag">Checkpoint 02 / 03</div>
             <div class="question-box">Which month are we setting camp for something special?</div>
             <div style="width:100%;">
                 <button class="quiz-option" onclick="wrongAnswer()">🍂 November 🍁</button>
-                <button class="quiz-option" onclick="correctAndNext('card-q3')">🥳 August🎈</button>
+                <button class="quiz-option" onclick="correctAndNext('card-q3')">🥳 August 🎈</button>
                 <button class="quiz-option" onclick="wrongAnswer()">🌸 May 🌼</button>
             </div>
         </div>
@@ -440,7 +453,7 @@
         </div>
     </div>
 
-    <!-- QUESTION 3 (PHOTO 3 & PHOTO 4) -->
+    <!-- QUESTION 3 -->
     <div class="card" id="card-q3">
         <div class="left-panel">
             <div class="progress-tag">Checkpoint 03 / 03</div>
@@ -472,7 +485,7 @@
             You passed the quiz! Something big is brewing for you this month... get ready for an amazing birthday journey ahead! ⛰️🎣🔥
         </div>
 
-        <p style="font-size: 22px; color: #7c5230; font-weight: 700;">Don't get too comfortable, hubby... The surprises have only just begun. See you in Week 2! 🎁😉 </p>
+        <p style="font-size: 20px; color: #7c5230; font-weight: 700;">Don't get too comfortable, hubby... The surprises have only just begun. See you in Week 2! 🎁😉 </p>
     </div>
 
 </div>
@@ -508,7 +521,6 @@
     }
 
     function triggerEnvelopeOpen() {
-        // Trigger audio play upon user interaction
         playMusic();
 
         const flap = document.getElementById('flap');
@@ -541,7 +553,6 @@
         });
         document.getElementById(cardId).classList.add('active');
 
-        // Automatically stop music when entering the final closing card
         if (cardId === 'card-closing') {
             stopMusic();
         }
