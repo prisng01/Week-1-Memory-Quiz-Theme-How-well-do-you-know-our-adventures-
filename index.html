@@ -508,7 +508,7 @@
     }
 
     function triggerEnvelopeOpen() {
-        // Start playing music on user interaction
+        // Trigger audio play upon user interaction
         playMusic();
 
         const flap = document.getElementById('flap');
@@ -541,7 +541,7 @@
         });
         document.getElementById(cardId).classList.add('active');
 
-        // Automatically stop music when reaching the final card
+        // Automatically stop music when entering the final closing card
         if (cardId === 'card-closing') {
             stopMusic();
         }
